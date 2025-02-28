@@ -20,7 +20,7 @@ export default function RootLayout({
 }: Readonly<{ children: ReactNode }>) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
+            <body className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-screen bg-amber-200`}>
                 {children}
             </body>
         </html>
