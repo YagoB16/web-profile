@@ -31,11 +31,11 @@
 }
 
 body {
-  background: var(--blue-dark);
+  background: var(--blue);
   margin: 0;
   padding: 0;
   font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
- 
+
 }
 
 body,
