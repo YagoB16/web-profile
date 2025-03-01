@@ -1,39 +1,45 @@
-@import "tailwindcss";
-
+@import 'tailwindcss';
+/* @import "boxicons/css/boxicons.min.css"; */
 
 :root {
-    --white: #ffffff;
-    --lightest-slate: #ccd6f6;
-    --gray-100: #f2f2f2;
-    --gray-200: #d9d9d9;
-    --gray-300: #808080;
-    --gray-400: #333333;
-    --gray-500: #262626;
-    --gray-600: #1a1a1a;
-    --gray-700: #0d0d0d;
+  --white: #ffffff;
+  --lightest-slate: #ccd6f6;
 
-    --purple: #8284fa;
-    --purple-dark: #5e60ce;
+  --gray-100: #f2f2f2;
+  --gray-200: #d9d9d9;
+  --gray-300: #808080;
+  --gray-400: #333333;
+  --gray-500: #262626;
+  --gray-600: #1a1a1a;
+  --gray-700: #0d0d0d;
 
-    --blue: #4ea8de;
-    --blue-dark: #0a192f;
+  --green: #64ffda;
 
-    --danger: #e25858;
-  }
+  --purple: #8284fa;
+  --purple-dark: #5e60ce;
 
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  --blue: #4ea8de;
+  --blue-dark: #0a192f;
 
-  body {
-    background: var(--blue-dark);
-  }
+  --danger: #e25858;
 
-  body,
-  button {
+  --nav-height: 100px;
+}
 
-    font-weight: 400;
-    font-size: 1rem;
-  }
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--blue-dark);
+  margin: 0;
+  padding: 0;
+  font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+ 
+}
+
+body,
+button {
+  font-weight: 400;
+  font-size: 1rem;
+}
