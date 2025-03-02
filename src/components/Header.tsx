@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import ImageLogo from '../app/assets/logo.svg'
-import { AlignJustifyIcon, X } from 'lucide-react'
+import { AlignJustifyIcon } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Header() {
@@ -57,14 +57,6 @@ export default function Header() {
                 className={`fixed md:hidden top-20 left-0 w-full bg-[var(--blue-dark)] flex flex-col items-center gap-6 pb-5 font-semibold text-lg transition-transform duration-500 ease-in-out ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                     }`}
             >
-                {/* Botão de fechar */}
-                {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-                <button
-                    className="self-end pr-6 text-2xl font-bold text-gray-600 hover:text-red-500 transition"
-                    onClick={() => setIsMenuOpen(false)}
-                >
-                   <X />
-                </button>
 
                 <ul className="flex flex-col items-center flex-1 w-full gap-6 text-base">
                     <li className="text-center">
@@ -84,7 +76,6 @@ export default function Header() {
                     </li>
                 </ul>
             </aside>
-
         </header>
     )
 }
