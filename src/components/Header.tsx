@@ -1,19 +1,19 @@
 'use client'
 import Image from 'next/image'
 import ImageLogo from '../app/assets/logo.svg'
-import { AlignJustifyIcon } from 'lucide-react'
+import { AlignJustifyIcon, X } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
-        <header className="flex justify-between items-center text-black py-6 px-8 lg:px-32 bg-amber-400 drop-shadow-md">
+        <header className="flex justify-between items-center bg-[var(--blue-dark)] text-[var(--lightest-slate)] py-6 px-8 lg:px-32 drop-shadow-md">
             {/* Logo */}
             <Image src={ImageLogo} alt="Logo" width={140} height={40} />
 
             {/* Navegação Desktop */}
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-8 ">
                 <ul className="flex gap-6 text-base">
                     <li>
                         <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
@@ -54,22 +54,31 @@ export default function Header() {
 
             {/* Menu Mobile */}
             <aside
-                className={`fixed md:hidden top-20 left-0 w-full h-[100vh] bg-white flex flex-col items-center justify-center gap-6 font-semibold text-lg transition-transform duration-600 ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                className={`fixed md:hidden top-20 left-0 w-full bg-[var(--blue-dark)] flex flex-col items-center gap-6 pb-5 font-semibold text-lg transition-transform duration-500 ease-in-out ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
                     }`}
             >
-                <ul className="w-full flex flex-col h-[100vh] items-center justify-center gap-y-6 text-base">
-                    <li>
-                        <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
+                {/* Botão de fechar */}
+                {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+                <button
+                    className="self-end pr-6 text-2xl font-bold text-gray-600 hover:text-red-500 transition"
+                    onClick={() => setIsMenuOpen(false)}
+                >
+                   <X />
+                </button>
+
+                <ul className="flex flex-col items-center flex-1 w-full gap-6 text-base">
+                    <li className="text-center">
+                        <a href="https://example.com" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
+                            About
+                        </a>
+                    </li>
+                    <li className="text-center">
+                        <a href="https://example.com" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
                             Experience
                         </a>
                     </li>
-                    <li>
-                        <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
-                            Experience
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
+                    <li className="text-center">
+                        <a href="https://example.com" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
                             Contact
                         </a>
                     </li>
