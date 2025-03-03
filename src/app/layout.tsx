@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
+import { Layout } from "../components/Layout";
 
 
 export const metadata: Metadata = {
@@ -28,10 +29,10 @@ export default function RootLayout({
 
 
     return (
-        <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable} w-full h-[100dvh]`}>
+        <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+            <Layout >
                 {children}
-            </body>
+            </Layout>
         </html>
     );
 }
