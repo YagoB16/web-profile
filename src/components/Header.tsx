@@ -8,7 +8,7 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     return (
-        <header className="absolute left-0 right-0 max-w-full flex items-center h-[var(--nav-height)] bg-[var(--navy)] text-[var(--lightest-slate)] px-12.5 drop-shadow-md">
+        <header className="absolute left-0 right-0 max-w-full flex items-center h-[var(--nav-height)] bg-[var(--navy)] text-[var(--lightest-slate)] md:px-10 px-5 drop-shadow-md">
 
             {/* Navegação Desktop */}
             <nav className="flex w-full justify-between items-center gap-8 ">
