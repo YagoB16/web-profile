@@ -9,17 +9,17 @@ export default function Home() {
                         Hi, my name is
                     </h1>
                 </div>
-                <div className='text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl'>
-                    <h2 className='!m-0'>
+                <div className='!m-0'>
+                    <h2 className=' text-[clamp(40px,_8vw,_80px)]'>
                         Yago Barbosa
                     </h2>
                 </div>
-                <div className='text-xl sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl'>
-                    <h3 className='!mt-1.5 !mb-0 !text-[var(--slate)]'>
+                <div className='!mt-1.5 !mb-0'>
+                    <h3 className=' !text-[var(--slate)] text-[clamp(40px,_8vw,_80px)]'>
                         I build things for the web.
                     </h3>
                 </div>
-                <div className='self-start'>
+                <div className='w-full md:max-w-2/4 self-start'>
                     <p className='mt-5'> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi possimus ducimus repellendus nihil ipsa odio quidem soluta consectetur expedita aliquam explicabo, eius in eveniet? Delectus incidunt at dolor dolorem est?</p>
                 </div>
                 <div className='mt-12.5'>
