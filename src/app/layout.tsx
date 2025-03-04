@@ -29,7 +29,7 @@ export default function RootLayout({
 
 
     return (
-        <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
+        <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth` }>
             <Layout >
                 {children}
             </Layout>

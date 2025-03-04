@@ -1,85 +1,37 @@
 'use client'
-import Image from 'next/image'
-import ImageLogo from '../app/assets/logo.svg'
-import { AlignJustifyIcon } from 'lucide-react'
-import { useState } from 'react'
+
 
 export default function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
 
     return (
-        <header className="absolute left-0 right-0 max-w-full flex items-center h-[var(--nav-height)] bg-[var(--navy)] text-[var(--lightest-slate)] md:px-10 px-5 drop-shadow-md">
-
-            {/* Navegação Desktop */}
-            <nav className="flex w-full justify-between items-center gap-8 ">
-
-                <div>
-                    <Image src={ImageLogo} alt="Logo" width={140} height={40} />
-                </div>
-
-                <div className='hidden md:flex items-center'>
-                    <ul className="flex gap-6 text-base">
-                        <li>
-                            <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
-                                Experience
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-
-                    <a
-                        href="https://example.com"
-                        className="border border-[var(--green)] rounded-md py-3 px-4 transition duration-300 hover:bg-[var(--green)] hover:text-[var(--gray-700)] ml-2.5"
-                    >
-                        Resume
-                    </a>
-                </div>
-
-                <div className='md:hidden'>
-                    {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-                    <button
-                        className="md:hidden block text-5xl cursor-pointer"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        aria-label="Abrir menu"
-                    >
-                        <AlignJustifyIcon />
-                    </button>
-
-                    {/* Menu Mobile */}
-                    <aside
-                        className={`fixed md:hidden top-20 left-0 w-full bg-[var(--navy)] flex flex-col items-center gap-6 pb-5 font-semibold text-lg transition-transform duration-500 ease-in-out ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
-                            }`}
-                    >
-
-                        <ul className="flex flex-col items-center flex-1 w-full gap-6 text-base">
-                            <li className="text-center">
-                                <a href="https://example.com" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
-                                    About
-                                </a>
-                            </li>
-                            <li className="text-center">
-                                <a href="https://example.com" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
-                                    Experience
-                                </a>
-                            </li>
-                            <li className="text-center">
-                                <a href="https://example.com" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
-                                    Contact
-                                </a>
-                            </li>
-                        </ul>
-                    </aside>
-                </div>
-            </nav>
-        </header>
+        <div id='home' className='flex flex-col items-start justify-center min-h-[100vh] '>
+            <div className='mb-7.5 ml-1'>
+                <h1 className='text-[clamp(var(--fz-sm),5vw,var(--fz-md))] font-normal text-[var(--green)]! '>
+                    Hi, my name is
+                </h1>
+            </div>
+            <div className='!m-0'>
+                <h2 className=' text-[clamp(40px,_8vw,_80px)]'>
+                    Yago Barbosa
+                </h2>
+            </div>
+            <div className='!mt-1.5 !mb-0'>
+                <h3 className=' !text-[var(--slate)] text-[clamp(40px,_8vw,_80px)]'>
+                    I build things for the web.
+                </h3>
+            </div>
+            <div className=''>
+                <p className='mt-5'>Sou desenvolvedor web com foco em back-end, atualmente estou me aprimorando para a stack de front-end utilizando React.</p>
+            </div>
+            <div className='mt-12.5'>
+                <a
+                    href="https://example.com"
+                    className="border border-[var(--green)] !text-[var(--green)] rounded-md py-3 px-4 transition duration-300 hover:bg-[var(--green)] hover:text-[var(--gray-700)]"
+                >
+                    Download resume
+                </a>
+            </div>
+        </div>
     )
 }
