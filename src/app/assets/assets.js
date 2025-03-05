@@ -7,7 +7,7 @@ import vscodeIcon from './vscode_icon.png'
 import phpIcon from './php_icon.png'
 import apiIcon from './api_icon.png'
 import webIcon from './web_icon.png'
-
+import bgImage from './image/bg.jpg'
 export const serviceData = [
     {
         icon: apiIcon,
@@ -29,6 +29,26 @@ export const serviceData = [
     },
 ];
 
+export const workerData = [
+    {
+
+        title: 'Frontend project',
+        description: 'Web Design',
+        bgImage: bgImage,
+    },
+    {
+
+        title: 'Movies project',
+        description: 'API Request',
+        bgImage: bgImage,
+    },
+    {
+
+        title: 'Frontend project',
+        description: 'Web Design',
+        bgImage: bgImage,
+    },
+];
 
 export const infoList = [
     {
