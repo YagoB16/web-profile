@@ -8,10 +8,10 @@ function About() {
         <>
             <div id='about' className='px-5 py-10 scroll-mt-20'>
                 <h4 className='text-center mb-2 text-lg'>
-                    About Me
+                    Introduction
                 </h4>
                 <h2 className='text-center text-5xl'>
-                    Introduction
+                    About Me
                 </h2>
 
                 <div className='flex w-full flex-col lg:flex-row items-center gap-20 my-20'>
@@ -42,9 +42,9 @@ function About() {
                             {toolsData.map((tool, index) => (
                                 <li className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400
                                 rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
-                                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                                key={index}>
-                                    <Image src={tool} alt='Tool' className='w-5 sm:w-7'/>
+                                    // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                                    key={index}>
+                                    <Image src={tool} alt='Tool' className='w-5 sm:w-7' />
                                 </li>
                             ))}
                         </ul>
