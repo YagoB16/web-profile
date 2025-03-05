@@ -1,24 +1,34 @@
 'use client'
 
 import { AlignJustifyIcon } from 'lucide-react'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import ImageLogo from '../app/assets/logo.svg'
 import { useState } from 'react'
 
 export default function NavBar() {
+    const [isScroll, setIsScroll] = useState(false)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (scrollY > 50) {
+                setIsScroll(true)
+            } else {
+                setIsScroll(false)
+            }
+        })
+    })
     return (
-        <div className="absolute left-0 right-0 max-w-full flex items-center h-[var(--nav-height)] bg-[var(--navy)] text-[var(--lightest-slate)] md:px-10 px-5 drop-shadow-md">
-            <nav className="flex w-full justify-between items-center gap-8 ">
+        <div className="fixed left-0 right-0 max-w-full flex items-center h-[var(--nav-height)] bg-[var(--navy)] text-[var(--lightest-slate)] md:px-10 px-5 drop-shadow-md">
+            <nav className={`flex w-full justify-between items-center gap-8 z-50 ${isScroll ? " bg-[var(--navy)] opacity-50 shadow-sm" : ""}`}>
                 <div>
                     <Image src={ImageLogo} alt="Logo" width={140} height={40} />
                 </div>
 
                 <div className='hidden md:flex items-center'>
-                    <ul className="flex gap-6 text-base">
-                    <li>
+                    <ul className={`flex gap-6 text-base ${isScroll ? "" : "bg-[var(--navy)] shadow-sm opacity-50"}`}>
+                        <li>
                             <a href="#home" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
                                 Home
                             </a>
@@ -81,6 +91,6 @@ export default function NavBar() {
                     </aside>
                 </div>
             </nav>
-        </div>
+        </div >
     )
 }

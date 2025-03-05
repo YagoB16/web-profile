@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import YagoIcon from '@/src/app/assets/yagueira-de-penny.jpg'
-import { infoList } from './../app/assets/assets'
+import { infoList, toolsData } from './../app/assets/assets'
 
 function About() {
     return (
@@ -35,9 +35,19 @@ function About() {
                                 </li>
                             ))}
                         </ul>
-                        <h4>
+                        <h4 className='!my-6 text-[var(--slate)]'>
                             Tools I use
                         </h4>
+                        <ul className='flex items-center gap-3 sm:gap-5'>
+                            {toolsData.map((tool, index) => (
+                                <li className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400
+                                rounded-lg cursor-pointer hover:-translate-y-1 duration-500'
+                                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                                key={index}>
+                                    <Image src={tool} alt='Tool' className='w-5 sm:w-7'/>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>

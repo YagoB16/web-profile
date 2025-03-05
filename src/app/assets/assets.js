@@ -1,6 +1,10 @@
 import educationIcon from './capelo_icon.png';
 import codeIcon from './code_icon.png';
 import projectIcon from './project_icon.png';
+import mysqlIcon from './mysql_icon.png'
+import gitIcon from './git_icon.png'
+import vscodeIcon from './vscode_icon.png'
+
 
 export const infoList = [
     {
@@ -19,3 +23,6 @@ export const infoList = [
         description: 'Built more than 3 projects',
     },
 ];
+export const toolsData =[
+    mysqlIcon, gitIcon, vscodeIcon
+]
