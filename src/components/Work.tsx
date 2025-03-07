@@ -1,7 +1,6 @@
 import React from 'react'
 import bg from '../app/assets/image/bg.jpg'
 import { workerData } from '../app/assets/assets'
-import Image from 'next/image'
 import { ArrowRight, ArrowRightIcon } from 'lucide-react'
 
 function Work() {
