@@ -48,6 +48,12 @@ export const workerData = [
         description: 'Web Design',
         bgImage: bgImage,
     },
+    {
+
+        title: 'Web project',
+        description: 'Web Design',
+        bgImage: bgImage,
+    },
 ];
 
 export const infoList = [
