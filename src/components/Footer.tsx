@@ -1,5 +1,4 @@
 import React from 'react'
-import instaIcon from '@/src/app/assets/insta_icon.png'
 import mailIcon from '@/src/app/assets/mail_icon.png'
 import logo from '@/src/app/assets/logo.png'
 import Image from 'next/image'
@@ -19,13 +18,13 @@ function Footer() {
         <p>Copyright © 2025 Yago Barbosa. Todos os direitos reservados</p>
         <ul className='flex items-center justify-center gap-10 mt-4 sm:mt-0'>
           <li>
-            <a target='_blank' href="">Github</a>
+            <a target='_blank' href="https://github.com/YagoB16">Github</a>
           </li>
           <li>
-            <a target='_blank' href="">LinkedIn</a>
+            <a target='_blank' href="https://www.linkedin.com/in/yago-barbosa-35762b219/">LinkedIn</a>
           </li>
           <li>
-            <a target='_blank' href="">Instagram</a>
+            <a target='_blank' href="https://www.instagram.com/yy.agoo/">Instagram</a>
           </li>
         </ul>
       </div>
