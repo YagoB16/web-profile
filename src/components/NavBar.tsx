@@ -12,40 +12,19 @@ export default function NavBar() {
     const [isUpNav, setIsUpNav] = useState(false);
 
     const divRef = useRef<HTMLDivElement>(null);
-
-    console.log(isUpNav);
-    useEffect(() => {
-        const handleMouseOver = () => {
-            setIsUpNav(!isUpNav);
-        };
-
-        const handleMouseOut = () => {
-            setIsUpNav(isUpNav);
-        };
-
-        const element = divRef.current;
-        if (element) {
-            element.addEventListener("mouseover", handleMouseOver);
-        }
-
-        if (element) {
-            element.addEventListener("mouseout", handleMouseOut);
-        }
-
-
-    }, []);
+      
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            if (scrollY > 50) {
+            if (scrollY > 100) {
                 setIsScroll(true)
-            } else {
+            } else{
                 setIsScroll(false)
             }
         })
     })
     return (
-        <div ref={divRef} className={`absolute z-1 left-0 right-0 max-w-full flex items-center h-[var(--nav-height)] bg-[var(--navy)] min-h-12  ${isScroll ? "fixed bg-[var(--navy)] opacity-50 shadow-sm drop-shadow-md" : ""} ${isMenuOpen || isUpNav ? "opacity-100" : ""} font-semibold !text-[var(--lightest-slate)] md:px-10 px-5 `}>
+        <div ref={divRef} className={`fixed z-1 left-0 right-0 max-w-full flex items-center h-[var(--nav-height)] bg-[var(--navy)] min-h-12  ${isScroll ? " bg-[var(--navy)] opacity-100 shadow-sm drop-shadow-md" : ""}  font-semibold !text-[var(--lightest-slate)] md:px-10 px-5 `}>
             <nav className="flex w-full justify-between items-center gap-8 z-50 ">
                 <div>
                     <Image src={ImageLogo} alt="Logo" width={140} height={40} />
@@ -64,18 +43,23 @@ export default function NavBar() {
                             </a>
                         </li>
                         <li>
-                            <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
-                                Experience
+                            <a href="#services" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
+                                Services
                             </a>
                         </li>
                         <li>
-                            <a href="https://example.com" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
+                            <a href="#work" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
+                                Work
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" className="p-3 rounded-md transition-all hover:text-[var(--green)]">
                                 Contact
                             </a>
                         </li>
                         <li>
                             <a
-                                href="https://example.com"
+                                href=""
                                 className="border border-[var(--green)] rounded-md py-2 px-4 transition duration-300 hover:bg-[var(--green)] hover:text-[var(--gray-700)] ml-2.5"
                             >
                                 Resume
@@ -106,12 +90,17 @@ export default function NavBar() {
                                 </a>
                             </li>
                             <li className="text-center">
-                                <a href="https://example.com" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
-                                    Experience
+                                <a href="#services" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
+                                    Services
                                 </a>
                             </li>
                             <li className="text-center">
-                                <a href="https://example.com" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
+                                <a href="#work" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
+                                    Work
+                                </a>
+                            </li>
+                            <li className="text-center">
+                                <a href="" className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
                                     Contact
                                 </a>
                             </li>
