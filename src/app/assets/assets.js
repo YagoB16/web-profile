@@ -8,6 +8,8 @@ import phpIcon from './php_icon.png'
 import apiIcon from './api_icon.png'
 import webIcon from './web_icon.png'
 import bgImage from './image/bg.jpg'
+import timerProject from './image/project-timer.png'
+import toDoListProject from './image/project-to-do-list.png'
 export const serviceData = [
     {
         icon: apiIcon,
@@ -31,28 +33,28 @@ export const serviceData = [
 
 export const workerData = [
     {
-
+        title: 'Timer project',
+        description: 'Timer created with React',
+        bgImage: `url(${timerProject.src})`,
+        link: 'https://github.com/YagoB16/ignite-timer',
+    },
+    {
+        title: 'To-do-list project',
+        description: 'A to-do list application built with React and TypeScript',
+        bgImage:`url(${toDoListProject.src})`,
+        link: 'https://github.com/YagoB16/to-do-list-ts',
+    },
+    {
         title: 'Frontend project',
         description: 'Web Design',
-        bgImage: bgImage,
+        bgImage: `url(${timerProject.src})`,
+        link: '',
     },
     {
-
-        title: 'Movies project',
-        description: 'API Request',
-        bgImage: bgImage,
-    },
-    {
-
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: bgImage,
-    },
-    {
-
         title: 'Web project',
         description: 'Web Design',
-        bgImage: bgImage,
+        bgImage: `url(${timerProject.src})`,
+        link: '',
     },
 ];
 
