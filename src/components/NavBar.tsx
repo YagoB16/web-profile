@@ -13,7 +13,6 @@ export default function NavBar() {
 
     const divRef = useRef<HTMLDivElement>(null);
 
-    console.log(isUpNav);
     useEffect(() => {
         const handleMouseOver = () => {
             setIsUpNav(!isUpNav);
@@ -23,24 +22,13 @@ export default function NavBar() {
             setIsUpNav(isUpNav);
         };
 
-        const element = divRef.current;
-        if (element) {
-            element.addEventListener("mouseover", handleMouseOver);
-        }
 
-        if (element) {
-            element.addEventListener("mouseout", handleMouseOut);
-        }
-
-
-    }, []);
+    }, [isUpNav]);
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
-            if (scrollY > 50) {
+            if (scrollY > 20) {
                 setIsScroll(true)
-            } else {
-                setIsScroll(false)
             }
         })
     })
