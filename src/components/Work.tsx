@@ -20,7 +20,7 @@ function Work() {
 
             <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-6 my-10">
                 {workerData.map((project, index) => {
-                    console.log("Projeto:", project.bgImage.src);
+                    
                     return (
                         <div
                             key={index}
