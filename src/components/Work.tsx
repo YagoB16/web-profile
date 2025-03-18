@@ -1,9 +1,6 @@
 import React from 'react'
-import bgProjectTimer from '../app/assets/image/project-timer.png'
-import bgProjectToDoList from '../app/assets/image/project-to-do-list.png'
 import { workerData } from '../app/assets/assets'
 import { ArrowRight, ArrowRightIcon } from 'lucide-react'
-import Image from 'next/image'
 
 function Work() {
     return (
