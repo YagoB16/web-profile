@@ -71,7 +71,7 @@ export default function NavBar() {
                         <li>
                             <a
                                 href=""
-                                className="border border-[var(--green)] rounded-md py-2 px-4 transition duration-300 hover:bg-[var(--green)] hover:text-[var(--gray-700)] ml-2.5"
+                                className="border border-[var(--green)] rounded-md py-2 px-4 transition duration-300 hover:bg-[var(--green)] hover:text-black ml-2.5"
                             >
                                 Resume
                             </a>

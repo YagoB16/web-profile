@@ -27,7 +27,7 @@ export default function Header() {
             <div className='mt-12.5'>
                 <a
                     href="https://example.com"
-                    className="border border-[var(--green)] !text-[var(--green)] rounded-md py-3 px-4 transition duration-300 hover:bg-[var(--green)] hover:text-[var(--gray-700)]"
+                    className="border border-[var(--green)] text-[var(--green)] rounded-md py-3 px-4 transition duration-300 hover:bg-[var(--green)] hover:text-black"
                 >
                     Download resume
                 </a>
