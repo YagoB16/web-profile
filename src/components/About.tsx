@@ -6,7 +6,7 @@ import { infoList, toolsData } from './../app/assets/assets'
 function About() {
     return (
         <>
-            <div id='about' className='px-5 py-10 scroll-mt-20'>
+            <div id='about' className='px-5 py-10 scroll-mt-20 h-150 min-h-[90vh]'>
                 <h4 className='text-center mb-2 text-lg'>
                     Introduction
                 </h4>

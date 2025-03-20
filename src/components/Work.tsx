@@ -6,7 +6,7 @@ function Work() {
     return (
         <div
             id="work"
-            className="px-5 py-10 scroll-mt-20 flex flex-col max-sm:items-center"
+            className="px-5 py-10 scroll-mt-20 flex flex-col max-sm:items-center min-h-[90vh]"
         >
             <h4 className="text-center mb-2 text-lg">My portfolio</h4>
             <h2 className="text-center text-5xl">My latest work</h2>

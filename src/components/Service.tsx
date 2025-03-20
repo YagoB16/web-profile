@@ -5,7 +5,7 @@ import { ArrowRight } from 'lucide-react'
 
 function Service() {
     return (
-        <div id='services' className='px-5 py-10 scroll-mt-20'>
+        <div id='services' className='px-5 py-10 scroll-mt-20 min-h-[80vh]'>
             <h4 className='text-center mb-2 text-lg'>
                 What I offer
             </h4>

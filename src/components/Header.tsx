@@ -5,7 +5,7 @@ export default function Header() {
 
 
     return (
-        <div id='home' className='flex flex-col items-start justify-center min-h-[120vh] '>
+        <div id='home' className='flex flex-col items-start justify-center min-h-[100vh] '>
             <div className='mb-7.5 ml-1'>
                 <h1 className='text-[clamp(var(--fz-sm),5vw,var(--fz-md))] font-normal text-[var(--green)]! '>
                     Hi, my name is
