@@ -15,8 +15,6 @@ export default function NavBar() {
             const sections = ['home', 'about', 'services', 'work', 'contact'];
             let currentSection = 'home';
 
-
-
             // biome-ignore lint/complexity/noForEach: <explanation>
             sections.forEach((section) => {
                 const element = document.getElementById(section);

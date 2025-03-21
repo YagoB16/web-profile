@@ -6,10 +6,10 @@ interface SectionProps {
 }
 
 
-function Work(id: SectionProps) {
+function Work({ id }: SectionProps) {
     return (
         <section
-            id="work"
+            id={id}
             className="px-5 py-10 scroll-mt-20 flex flex-col max-sm:items-center min-h-[90vh]"
         >
             <h4 className="text-center mb-2 text-lg">My portfolio</h4>

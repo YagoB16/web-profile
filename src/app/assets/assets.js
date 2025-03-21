@@ -7,7 +7,6 @@ import vscodeIcon from './vscode_icon.png'
 import phpIcon from './php_icon.png'
 import apiIcon from './api_icon.png'
 import webIcon from './web_icon.png'
-import bgImage from './image/bg.jpg'
 import timerProject from './image/project-timer.png'
 import toDoListProject from './image/project-to-do-list.png'
 export const serviceData = [

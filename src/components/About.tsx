@@ -8,10 +8,10 @@ interface SectionProps {
 }
 
 
-function About(id: SectionProps) {
+function About({ id }: SectionProps) {
     return (
         <>
-            <section id='about' className='px-5 py-10 scroll-mt-20  min-h-[120vh] lg:min-h-[90vh]'>
+            <section id={id} className='px-5 py-10 scroll-mt-20  min-h-[120vh] lg:min-h-[90vh]'>
                 <h4 className='text-center mb-2 text-lg'>
                     Introduction
                 </h4>
