@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Geist, Geist_Mono, Fira_Mono } from "next/font/google";
+import { Geist, } from "next/font/google";
 
 import "./globals.css";
 import { Layout } from "../components/Layout";
@@ -18,10 +18,7 @@ const geistSans = Geist({
     subsets: ["latin"],
 });
 
-const geistFira= Fira_Mono({
-    variable: "--font-fira-mono",
-    weight: '400'
-});
+
 
 export default function RootLayout({
     children,
@@ -29,7 +26,7 @@ export default function RootLayout({
 
 
     return (
-        <html lang="en" className={`${geistFira.variable} scroll-smooth` }>
+        <html lang="en" className={`${geistSans.variable} scroll-smooth` }>
             <Layout >
                 {children}
             </Layout>
