@@ -15,7 +15,7 @@ export default function NavBar() {
             const sections = ['home', 'about', 'services', 'work', 'contact'];
             let currentSection = 'home';
 
-            let minDiff = Infinity; // Guarda a menor diferença do centro
+
 
             // biome-ignore lint/complexity/noForEach: <explanation>
             sections.forEach((section) => {
@@ -26,7 +26,7 @@ export default function NavBar() {
                     const sectionBottom = rect.bottom;
                     const viewportHeight = window.innerHeight;
 
-                    // Nova lógica: a seção ativa será a que ocupa mais espaço na tela
+
                     if (sectionTop < viewportHeight * 0.6 && sectionBottom > viewportHeight * 0.4) {
                         currentSection = section;
                     }
@@ -39,6 +39,8 @@ export default function NavBar() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+
 
 
     return (
@@ -70,6 +72,7 @@ export default function NavBar() {
                 </div>
 
                 <div className="md:hidden">
+                    {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
                     <button
                         className="md:hidden block text-5xl cursor-pointer"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -77,6 +80,46 @@ export default function NavBar() {
                     >
                         <AlignJustifyIcon />
                     </button>
+                    <aside
+                        className={`fixed md:hidden top-20 left-0 w-full bg-[var(--navy)] flex flex-col items-center gap-6 pb-5 font-semibold text-lg transition-transform duration-500 ease-in-out ${isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+                            }`}
+                    >
+
+                        <ul className="flex flex-col items-center flex-1 w-full gap-6 text-base">
+                            <li className="text-center">
+                                {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
+                                <a href="#about"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
+                                    About
+                                </a>
+                            </li>
+                            <li className="text-center">
+                                {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
+                                <a href="#services"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
+                                    Services
+                                </a>
+                            </li>
+                            <li className="text-center">
+                                {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
+                                <a href="#work"
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
+                                    Work
+                                </a>
+                            </li>
+                            <li className="text-center">
+                                {/* biome-ignore lint/a11y/useValidAnchor: <explanation> */}
+                                <a href=""
+                                onClick={() => setIsMenuOpen(false)}
+                                className="p-3 block rounded-md transition-all hover:text-[var(--green)]">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </aside>
                 </div>
             </nav>
         </div>
