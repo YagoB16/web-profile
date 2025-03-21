@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <Header />
-      <About />
-      <Service />
-      <Work />
+      <Header id="home" />
+      <About id="about" />
+      <Service id="services" />
+      <Work id="work" />
       <Footer />
     </>
   )

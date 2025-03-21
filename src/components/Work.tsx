@@ -1,10 +1,14 @@
 import React from 'react'
 import { workerData } from '../app/assets/assets'
 import { ArrowRight, ArrowRightIcon } from 'lucide-react'
+interface SectionProps {
+    id: string;
+}
 
-function Work() {
+
+function Work(id: SectionProps) {
     return (
-        <div
+        <section
             id="work"
             className="px-5 py-10 scroll-mt-20 flex flex-col max-sm:items-center min-h-[90vh]"
         >
@@ -17,7 +21,7 @@ function Work() {
 
             <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-6 my-10">
                 {workerData.map((project, index) => {
-                    
+
                     return (
                         <div
                             key={index}
@@ -46,7 +50,7 @@ function Work() {
             <a href="#" className='w-max flex items-center justify-center gap-2 text-gray-700 border-[0.5px] !border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-[var(--light-slate)] duration-500'>
                 Show more <ArrowRight size={16} />
             </a>
-        </div>
+        </section>
     )
 }
 

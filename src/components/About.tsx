@@ -3,10 +3,15 @@ import Image from 'next/image'
 import YagoIcon from '@/src/app/assets/yagueira-de-penny.jpg'
 import { infoList, toolsData } from './../app/assets/assets'
 
-function About() {
+interface SectionProps {
+    id: string;
+}
+
+
+function About(id: SectionProps) {
     return (
         <>
-            <div id='about' className='px-5 py-10 scroll-mt-20 h-150 min-h-[90vh]'>
+            <section id='about' className='px-5 py-10 scroll-mt-20  min-h-[120vh] lg:min-h-[90vh]'>
                 <h4 className='text-center mb-2 text-lg'>
                     Introduction
                 </h4>
@@ -50,7 +55,7 @@ function About() {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
 
         </>
     )

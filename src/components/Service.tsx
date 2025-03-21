@@ -3,9 +3,14 @@ import { serviceData } from '../app/assets/assets'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 
-function Service() {
+interface SectionProps {
+    id: string;
+}
+
+
+function Service(id: SectionProps) {
     return (
-        <div id='services' className='px-5 py-10 scroll-mt-20 min-h-[80vh]'>
+        <section id='services' className='px-5 py-10 scroll-mt-20 min-h-[80vh]'>
             <h4 className='text-center mb-2 text-lg'>
                 What I offer
             </h4>
@@ -30,7 +35,7 @@ function Service() {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 
