@@ -1,40 +1,40 @@
-import Image from 'next/image'
-import ImageLogo from '../app/assets/logo.svg'
-export default function Header() {
-  return (
-    <>
-      <header className="flex top-0 z-11 w-full h-[var(--nav-height)] items-center bg-[#0A192F] bg-opacity-85 backdrop-blur-lg transition-all px-[50px] pointer-events-auto user-select-auto">
-        <nav className="flex items-center justify-between w-full text-[var(--lightest-slate)] z-12">
-          <div className="flex items-center justify-center ">
-            <Image src={ImageLogo} alt="" width={140} height={40} />
-          </div>
+'use client'
 
-          <div className="flex items-center gap-6 font-fira text-[var(--lightest-slate)]">
-            <ol className="flex gap-4 list-decimal list-inside marker:text-[var(--green)]">
-              <li className="mx-1">
-                <a href="https://example.com" className="hover:text-[var(--green)]">
-                  About
-                </a>
-              </li>
-              <li className="mx-1">
-                <a href="https://example.com" className="hover:text-[var(--green)]">
-                  Experience
-                </a>
-              </li>
-              <li className="mx-1">
-                <a href="https://example.com" className="hover:text-[var(--green)]">
-                  Contact
-                </a>
-              </li>
-            </ol>
-            <div className="border border-[var(--green)] rounded-md flex items-center justify-center py-3 px-4 hover:bg-[var(--green)] hover:text-[var(--gray-700)] transition duration-300">
-              <a href="https://example.com" className=" text-[var(--fz-xs)]">
-                Resume
-              </a>
+interface SectionProps {
+    id: string;
+}
+
+export default function Header(id: SectionProps) {
+
+
+    return (
+        <section id='home' className='flex flex-col items-start justify-center min-h-[100vh] '>
+            <div className='mb-7.5 ml-1'>
+                <h1 className='text-[clamp(var(--fz-sm),5vw,var(--fz-md))] font-normal text-[var(--green)]! '>
+                    Hi, my name is
+                </h1>
             </div>
-          </div>
-        </nav>
-      </header>
-    </>
-  )
+            <div className='!m-0'>
+                <h2 className=' text-[clamp(40px,_8vw,_80px)]'>
+                    Yago Barbosa
+                </h2>
+            </div>
+            <div className='!mt-1.5 !mb-0'>
+                <h3 className=' !text-[var(--slate)] text-[clamp(40px,_8vw,_80px)]'>
+                    I build things for the web.
+                </h3>
+            </div>
+            <div className=''>
+                <p className='mt-5'>Sou desenvolvedor web com foco em back-end, atualmente estou me aprimorando para a stack de front-end utilizando React.</p>
+            </div>
+            <div className='mt-12.5'>
+                <a
+                    href="https://example.com"
+                    className="border border-[var(--green)] text-[var(--green)] rounded-md py-3 px-4 transition duration-300 hover:bg-[var(--green)] hover:text-black"
+                >
+                    Download resume
+                </a>
+            </div>
+        </section>
+    )
 }
