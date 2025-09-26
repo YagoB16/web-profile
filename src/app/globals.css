@@ -197,3 +197,84 @@ h1, h2, h3, h4, h5, h6 {
     @apply bg-background text-foreground;
   }
 }
+
+/* Animação shimmer para o skeleton */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Classe utilitária para shimmer */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
+/* Variações do skeleton para diferentes contextos */
+.skeleton-card {
+  background: linear-gradient(
+    90deg,
+    var(--light-navy) 25%,
+    var(--lightest-navy) 50%,
+    var(--light-navy) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.8s ease-in-out infinite;
+}
+
+.skeleton-text {
+  background: linear-gradient(
+    90deg,
+    var(--dark-slate) 25%,
+    var(--slate) 50%,
+    var(--dark-slate) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+  height: 1rem;
+}
+
+.skeleton-avatar {
+  background: linear-gradient(
+    90deg,
+    var(--light-navy) 25%,
+    var(--lightest-navy) 50%,
+    var(--light-navy) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 2s ease-in-out infinite;
+  border-radius: 50%;
+}
+
+.skeleton-image {
+  background: linear-gradient(
+    135deg,
+    var(--navy) 25%,
+    var(--light-navy) 50%,
+    var(--navy) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 2.2s ease-in-out infinite;
+}
+
+/* Efeito de loading mais sutil */
+.skeleton-subtle {
+  background: linear-gradient(
+    90deg,
+    transparent 25%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 3s ease-in-out infinite;
+  backdrop-filter: blur(1px);
+}
