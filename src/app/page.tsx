@@ -1,18 +1,19 @@
 'use client'
-import Header from '@/src/components/Header'
-import About from '../components/About'
-import NavBar from '../components/NavBar'
-import Service from '../components/Service'
-import Work from '../components/Work'
-import Footer from '@/src/components/Footer'
-import Reveal from '@/src/components/Reveal'
+
+import About from '@/src/components/sections/About'
+import NavBar from '@/src/components/layout/NavBar'
+import Service from '@/src/components/sections/Service'
+import Work from '@/src/components/sections/Work'
+import Footer from '@/src/components/layout/Footer'
+import Reveal from '@/src/components/features/Reveal'
+import Hero from '@/src/components/sections/Hero'
 
 export default function Home() {
   return (
     <>
       <NavBar />
       <Reveal direction="left">
-        <Header id="home" />
+        <Hero id="home" />
       </Reveal>
       <Reveal direction="zoom" delay={0.3}>
         <About id="about" />
