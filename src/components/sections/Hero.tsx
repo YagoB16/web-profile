@@ -6,7 +6,7 @@ interface SectionProps {
   id: string
 }
 
-export default function Header({ id }: SectionProps) {
+export default function Hero({ id }: SectionProps) {
   return (
     <motion.section
       id={id}
