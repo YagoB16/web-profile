@@ -80,8 +80,6 @@ export default function NavBar() {
               </li>
             ))}
           </ul>
-
-          {/* Seletor de Idioma */}
           <LanguageSwitcher />
         </div>
 
