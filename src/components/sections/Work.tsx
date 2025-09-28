@@ -1,6 +1,6 @@
-// src/components/Work.tsx - Versão com Skeleton Loading
+
 import React, { useState, useEffect } from 'react'
-import { workerData } from '../app/assets/assets'
+import { workerData } from '@/src/app/assets/assets'
 import { ArrowRight, ArrowRightIcon } from 'lucide-react'
 import { Skeleton } from '@/src/components/ui/skeleton'
 

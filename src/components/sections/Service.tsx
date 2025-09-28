@@ -1,5 +1,5 @@
 import React from 'react'
-import { serviceData } from '../app/assets/assets'
+import { serviceData } from '@/src/app/assets/assets'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 
