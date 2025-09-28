@@ -1,34 +1,36 @@
-// src/components/About.tsx - Usando o skeleton melhorado
-import React, { useState, useEffect } from 'react'
-import Image from 'next/image'
-import YagoIcon from '@/src/app/assets/yagueira-de-penny.jpg'
-import { infoList, toolsData } from '@/src/app/assets/assets'
-import { Skeleton } from '@/src/components/ui/skeleton'
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
+import YagoIcon from "@/src/app/assets/yagueira-de-penny.jpg";
+import { infoList, toolsData } from "@/src/app/assets/assets";
+import { Skeleton } from "@/src/components/ui/skeleton";
+import { useLanguage } from "@/src/contexts/LanguageContext";
 
 interface SectionProps {
-  id: string
+  id: string;
 }
 
 function About({ id }: SectionProps) {
-  const [isLoading, setIsLoading] = useState(true)
-  const [imageLoaded, setImageLoaded] = useState(false)
+  const [isLoading, setIsLoading] = useState(true);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const { t } = useLanguage();
 
   // Simula carregamento
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 2000)
+      setIsLoading(false);
+    }, 2000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <section
       id={id}
       className="px-5 py-10 scroll-mt-20 min-h-[120vh] lg:min-h-[90vh]"
     >
-      <h4 className="text-center mb-2 text-lg">Introduction</h4>
-      <h2 className="text-center text-5xl">About Me</h2>
+      <h4 className="text-center mb-2 text-lg">{t("about.introduction")}</h4>
+      <h2 className="text-center text-5xl">{t("about.title")}</h2>
 
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
         {/* Skeleton para imagem com variant específico */}
@@ -43,7 +45,7 @@ function About({ id }: SectionProps) {
             src={YagoIcon}
             alt="Icon Yago"
             className={`w-full rounded-3xl transition-opacity duration-500 ${
-              imageLoaded ? 'opacity-100' : 'opacity-0 absolute'
+              imageLoaded ? "opacity-100" : "opacity-0 absolute"
             }`}
             onLoad={() => setImageLoaded(true)}
           />
@@ -59,12 +61,14 @@ function About({ id }: SectionProps) {
               <Skeleton variant="text" className="h-4 w-5/6" />
             </div>
           ) : (
-            <p className="mb-10 max-w-3xl">
-              I am a backend developer with just under 3 years of experience. I
-              am currently improving my Frontend skills. I am part of a team of
-              developers, where I collaborate on the development of software and
-              learn from them.
-            </p>
+            <div>
+              <p className="mb-10 max-w-3xl">
+                {t("about.description.first_paragrafh")}
+              </p>
+              <p className="mb-10 max-w-3xl">
+                {t("about.description.second_paragrafh")}
+              </p>
+            </div>
           )}
 
           {/* Skeleton para cards com variant card */}
@@ -137,7 +141,7 @@ function About({ id }: SectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

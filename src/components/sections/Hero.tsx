@@ -21,7 +21,7 @@ export default function Hero({ id }: SectionProps) {
     >
       <section
         id={id}
-        className="flex flex-col items-start justify-center min-h-[100vh] ease-in max-w-6xl"
+        className="flex flex-col items-start justify-center min-h-[100vh] ease-in w-full"
       >
         {/* Greeting - Altura fixa */}
         <div className="mb-7.5 ml-1 h-8 flex items-end">
