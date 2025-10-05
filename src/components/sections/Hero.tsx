@@ -1,4 +1,4 @@
-// src/components/sections/Hero.tsx - Versão com layout consistente
+
 "use client";
 
 import { motion } from "framer-motion";
