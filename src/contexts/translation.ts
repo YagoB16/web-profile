@@ -79,7 +79,7 @@ export const translations: Translations = {
     "services.subtitle": "O que eu ofereço",
     "services.title": "Meus serviços",
     "services.description":
-      "Sou um desenvolvedor Backend de São Paulo, BR com 3 anos de experiência em sistemas B2B.",
+      "Especialista em Desenvolvimento e Manutenção de APIs RESTful e GraphQL, com foco em performance, segurança (OAuth 2.0/JWT) e documentação (OpenAPI/Swagger). ",
     "services.read_more": "Ler mais",
 
     // Work Section
@@ -125,7 +125,7 @@ export const translations: Translations = {
     "services.subtitle": "What I offer",
     "services.title": "My services",
     "services.description":
-      "I am a Backend developer from São Paulo, BR with 3 years of experience in B2B systems.",
+      "Specialist in RESTful and GraphQL API Development and Maintenance, focusing on performance, security (OAuth 2.0/JWT), and documentation (OpenAPI/Swagger).",
     "services.read_more": "Read more",
 
     // Work Section

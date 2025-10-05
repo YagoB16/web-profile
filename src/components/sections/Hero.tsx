@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -33,17 +32,19 @@ export default function Hero({ id }: SectionProps) {
         {/* Nome - Altura fixa */}
         <div className="!m-0 h-22 inline-block items-center overflow-hidden whitespace-nowrap font-mono">
           <h2 className="text-[clamp(40px,_8vw,_80px)] leading-none">
-            {t("hero.name")}
+
+             <TypeAnimation
+              sequence={[t("hero.name"), 1000]}
+              speed={5}
+            />
           </h2>
         </div>
 
         {/* Subtítulo - Container com altura mínima fixa */}
         <div className="!mt-2.5 !mb-0 min-h-[80px] flex items-center">
-          <h3 className="!text-[var(--slate)] text-[clamp(32px,_6vw,_65px)] leading-tight max-w-4xl">
-            <TypeAnimation
-              sequence={[t("hero.subtitle"), 1000]}
-              speed={50}
-            />
+          <h3 className="!text-[var(--slate)] text-outline text-[clamp(32px,_6vw,_65px)] leading-tight max-w-4xl">
+               {t("hero.subtitle")}
+
           </h3>
         </div>
 

@@ -17,14 +17,14 @@
   --navy: #0a192f;
   --light-navy: #112240;
   --lightest-navy: #233554;
-  --navy-shadow: rgba(2,12,27,0.7);
+  --navy-shadow: rgba(2, 12, 27, 0.7);
   --dark-slate: #495670;
   --slate: #8892b0;
   --light-slate: #a8b2d1;
   --lightest-slate: #ccd6f6;
   --white: #e6f1ff;
   --green: #64ffda;
-  --green-tint: rgba(100,255,218,0.1);
+  --green-tint: rgba(100, 255, 218, 0.1);
   --pink: #f57dff;
   --blue: #57cbff;
 
@@ -43,8 +43,8 @@
 
   --grid-auto: 'repeat(auto-fit, minmax(200px, 1fr))';
 
-  --font-sans: 'Calibre','Inter','San Francisco','SF Pro Text','-apple-system',system-ui,sans-serif;
-  --font-mono: 'SF Mono','Fira Code','Fira Mono','Roboto Mono',monospace;
+  --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', '-apple-system', system-ui, sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -97,11 +97,16 @@ body {
   width: 100%;
 }
 
-html{
-    scrollbar-color: var(--dark-slate) var(--navy);
+html {
+  scrollbar-color: var(--dark-slate) var(--navy);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0px 0px 10px;
   font-weight: 600;
   color: var(--lightest-slate);
@@ -193,8 +198,20 @@ h1, h2, h3, h4, h5, h6 {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* globals.css */
+@layer utilities {
+  .text-outline {
+    text-shadow:
+      1px 1px 0 #164e47d8,
+      -1px 1px 0 #280c5e,
+      1px -1px 0 #280c5e,
+      -1px -1px 0 #280c5e;
   }
 }
 
@@ -203,6 +220,7 @@ h1, h2, h3, h4, h5, h6 {
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -221,59 +239,49 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Variações do skeleton para diferentes contextos */
 .skeleton-card {
-  background: linear-gradient(
-    90deg,
-    var(--light-navy) 25%,
-    var(--lightest-navy) 50%,
-    var(--light-navy) 75%
-  );
+  background: linear-gradient(90deg,
+      var(--light-navy) 25%,
+      var(--lightest-navy) 50%,
+      var(--light-navy) 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.8s ease-in-out infinite;
 }
 
 .skeleton-text {
-  background: linear-gradient(
-    90deg,
-    var(--dark-slate) 25%,
-    var(--slate) 50%,
-    var(--dark-slate) 75%
-  );
+  background: linear-gradient(90deg,
+      var(--dark-slate) 25%,
+      var(--slate) 50%,
+      var(--dark-slate) 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.5s ease-in-out infinite;
   height: 1rem;
 }
 
 .skeleton-avatar {
-  background: linear-gradient(
-    90deg,
-    var(--light-navy) 25%,
-    var(--lightest-navy) 50%,
-    var(--light-navy) 75%
-  );
+  background: linear-gradient(90deg,
+      var(--light-navy) 25%,
+      var(--lightest-navy) 50%,
+      var(--light-navy) 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 2s ease-in-out infinite;
   border-radius: 50%;
 }
 
 .skeleton-image {
-  background: linear-gradient(
-    135deg,
-    var(--navy) 25%,
-    var(--light-navy) 50%,
-    var(--navy) 75%
-  );
+  background: linear-gradient(135deg,
+      var(--navy) 25%,
+      var(--light-navy) 50%,
+      var(--navy) 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 2.2s ease-in-out infinite;
 }
 
 /* Efeito de loading mais sutil */
 .skeleton-subtle {
-  background: linear-gradient(
-    90deg,
-    transparent 25%,
-    rgba(255, 255, 255, 0.1) 50%,
-    transparent 75%
-  );
+  background: linear-gradient(90deg,
+      transparent 25%,
+      rgba(255, 255, 255, 0.1) 50%,
+      transparent 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 3s ease-in-out infinite;
   backdrop-filter: blur(1px);
