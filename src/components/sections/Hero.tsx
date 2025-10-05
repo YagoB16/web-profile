@@ -34,8 +34,9 @@ export default function Hero({ id }: SectionProps) {
           <h2 className="text-[clamp(40px,_8vw,_80px)] leading-none">
 
              <TypeAnimation
-              sequence={[t("hero.name"), 1000]}
+              sequence={[t("hero.name"), 1000, " ", 1000]}
               speed={5}
+              repeat={Infinity}
             />
           </h2>
         </div>
