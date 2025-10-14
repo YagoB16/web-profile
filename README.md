@@ -1,4 +1,4 @@
-# Análise do Projeto Portfolio - Yago Barbosa
+# Projeto Portfolio - Yago Barbosa
 
 ## 🏗️ Arquitetura do Projeto
 
