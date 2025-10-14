@@ -5,6 +5,7 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { Layout } from "../components/Layout";
 import { LanguageProvider } from "../contexts/LanguageContext";
+import { FormProvider } from "../contexts/FormContext";
 
 export const metadata: Metadata = {
   title: "Web Profile",
@@ -25,7 +26,9 @@ export default function RootLayout({
   return (
     <html lang="pt-br" className={`${geistSans.variable} scroll-smooth`}>
       <LanguageProvider>
-        <Layout>{children}</Layout>
+        <FormProvider>
+          <Layout>{children}</Layout>
+        </FormProvider>
       </LanguageProvider>
     </html>
   );

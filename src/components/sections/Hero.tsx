@@ -45,7 +45,6 @@ export default function Hero({ id }: SectionProps) {
         <div className="!mt-2.5 !mb-0 min-h-[80px] flex items-center">
           <h3 className="!text-[var(--slate)] text-outline text-[clamp(32px,_6vw,_65px)] leading-tight max-w-4xl">
                {t("hero.subtitle")}
-
           </h3>
         </div>
 

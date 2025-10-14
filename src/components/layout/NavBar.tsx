@@ -15,7 +15,7 @@ export default function NavBar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "services", "work", "contact"];
+      const sections = ["home", "about", "services", "work", "footer"];
       let currentSection = "home";
 
       sections.forEach((section) => {
