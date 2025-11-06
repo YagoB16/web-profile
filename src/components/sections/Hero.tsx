@@ -58,7 +58,7 @@ export default function Hero({ id }: SectionProps) {
         {/* Botão - Altura padronizada */}
         <div className="mt-12.5">
           <a
-            href="https://example.com"
+            href="/Yago_Barbosa_Currículo.pdf"
             className="inline-flex items-center justify-center relative group border border-[var(--green)] text-[var(--green)] rounded-md py-4 px-6 font-medium min-w-[180px] text-center z-0 overflow-hidden transition-colors duration-500"
           >
             <span className="absolute top-0 left-0 w-0 h-full bg-[var(--green)] z-[-1] transition-all duration-500 group-hover:w-full"></span>
